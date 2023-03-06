@@ -28,112 +28,115 @@ import { Observable } from 'rxjs';
  * this.bluetoothSerial.write(data.buffer).then(success, failure);
  * ```
  */
-export declare class BluetoothSerialOriginal extends IonicNativePlugin {
+import * as ɵngcc0 from '@angular/core';
+export declare class BluetoothSerial extends IonicNativePlugin {
     /**
      * Connect to a Bluetooth device
      * @param {string} macAddress_or_uuid Identifier of the remote device
      * @returns {Observable<any>} Subscribe to connect, unsubscribe to disconnect.
      */
-    connect(btName: any, macAddress_or_uuid: string): Observable<any>;
+    connect(btName, macAddress_or_uuid: string): Observable<any>;
     /**
      * Connect insecurely to a Bluetooth device
      * @param {string} macAddress Identifier of the remote device
      * @returns {Observable<any>} Subscribe to connect, unsubscribe to disconnect.
      */
-    connectInsecure(btName: any, macAddress: string): Observable<any>;
+    connectInsecure(btName, macAddress: string): Observable<any>;
     /**
      * Disconnect from the connected device
      * @returns {Promise<any>}
      */
-    disconnect(btName: any): Promise<any>;
+    disconnect(btName): Promise<any>;
     /**
      * Writes data to the serial port
      * @param {any} data ArrayBuffer of data
      * @returns {Promise<any>} returns a promise when data has been written
      */
-    write(btName: any, data: any): Promise<any>;
+    write(btName, data: any): Promise<any>;
     /**
      * Gets the number of bytes of data available
      * @returns {Promise<any>} returns a promise that contains the available bytes
      */
-    available(btName: any): Promise<any>;
+    available(btName): Promise<any>;
     /**
      * Reads data from the buffer
      * @returns {Promise<any>} returns a promise with data from the buffer
      */
-    read(btName: any): Promise<any>;
+    read(btName): Promise<any>;
     /**
      * Reads data from the buffer until it reaches a delimiter
      * @param {string} delimiter string that you want to search until
      * @returns {Promise<any>} returns a promise
      */
-    readUntil(btName: any, delimiter: string): Promise<any>;
+    readUntil(btName, delimiter: string): Promise<any>;
     /**
      * Subscribe to be notified when data is received
      * @param {string} delimiter the string you want to watch for
      * @returns {Observable<any>} returns an observable.
      */
-    subscribe(btName: any, delimiter: string): Observable<any>;
+    subscribe(btName, delimiter: string): Observable<any>;
     /**
      * Subscribe to be notified when data is received
      * @returns {Observable<any>} returns an observable
      */
-    subscribeRawData(btName: any): Observable<any>;
+    subscribeRawData(btName): Observable<any>;
     /**
      * Clears data in buffer
      * @returns {Promise<any>} returns a promise when completed
      */
-    clear(btName: any): Promise<any>;
+    clear(btName): Promise<any>;
     /**
      * Lists bonded devices
      * @returns {Promise<any>} returns a promise
      */
-    list(btName: any): Promise<any>;
+    list(btName): Promise<any>;
     /**
      * Reports if bluetooth is enabled
      * @returns {Promise<any>} returns a promise
      */
-    isEnabled(btName: any): Promise<any>;
+    isEnabled(btName): Promise<any>;
     /**
      * Reports the connection status
      * @returns {Promise<any>} returns a promise
      */
-    isConnected(btName: any): Promise<any>;
+    isConnected(btName): Promise<any>;
     /**
      * Reads the RSSI from the connected peripheral
      * @returns {Promise<any>} returns a promise
      */
-    readRSSI(btName: any): Promise<any>;
+    readRSSI(btName): Promise<any>;
     /**
      * Show the Bluetooth settings on the device
      * @returns {Promise<any>} returns a promise
      */
-    showBluetoothSettings(btName: any): Promise<any>;
+    showBluetoothSettings(btName): Promise<any>;
     /**
      * Enable Bluetooth on the device
      * @returns {Promise<any>} returns a promise
      */
-    enable(btName: any): Promise<any>;
+    enable(btName): Promise<any>;
     /**
      * Discover unpaired devices
      * @returns {Promise<any>} returns a promise
      */
-    discoverUnpaired(btName: any): Promise<any>;
+    discoverUnpaired(btName): Promise<any>;
     /**
      * Subscribe to be notified on Bluetooth device discovery. Discovery process must be initiated with the `discoverUnpaired` function.
      * @returns {Observable<any>} Returns an observable
      */
-    setDeviceDiscoveredListener(): Observable<any>;
+    setDeviceDiscoveredListener(btName): Observable<any>;
     /**
      * Sets the human readable device name that is broadcasted to other devices
      * @param {string} newName Desired name of device
      */
-    setName(btName: any, newName: string): void;
+    setName(btName, newName: string): void;
     /**
      * Makes the device discoverable by other devices
      * @param {number} discoverableDuration Desired number of seconds device should be discoverable for
      */
-    setDiscoverable(btName: any, discoverableDuration: number): void;
+    setDiscoverable(btName, discoverableDuration: number): void;
+    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<BluetoothSerial, never>;
+    static ɵprov: ɵngcc0.ɵɵInjectableDeclaration<BluetoothSerial>;
 }
 
-export declare const BluetoothSerial: BluetoothSerialOriginal;
+//# sourceMappingURL=index.d.ts.map
